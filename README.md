@@ -22,7 +22,7 @@ This project is ideal for Flutter developers looking to explore API integration,
 
 | Splash Screen | World Stats | Country List | Country Details |
 |---------------|-------------|---------------|------------------|
-| ![Splash](assets/screens/splash.png) | ![World](assets/screens/world_stats.png) | ![List](assets/screens/countries_list.png) | ![Details](assets/screens/details_view.png) |
+| https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/7d9cfd87f64f9161d8830080ea31fc5e637b0490/assets/splash%20screen.jpg | https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/7d9cfd87f64f9161d8830080ea31fc5e637b0490/assets/wolrd%20list.jpg |  | https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/42033468b9e17de1a57ca55059ae4dd55e660887/assets/Countries%20List.jpg |
 
 > _Make sure to add actual screenshots to the `assets/screens/` folder for proper rendering._
 
