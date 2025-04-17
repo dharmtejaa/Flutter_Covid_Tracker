@@ -33,108 +33,93 @@ class _DetailsListState extends State<DetailsList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          widget.name!,
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-      ),
+      appBar: AppBar(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 10, right: 10),
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: MediaQuery.of(context).size.height * 0.13),
-                Stack(
-                  alignment: Alignment.topCenter,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * .058,
-                      ),
-                      // card for details
-                      child: Card(
-                        margin: EdgeInsets.only(left: 10, right: 10),
-                        // ignore: deprecated_member_use
-                        color: Colors.grey[600]?.withOpacity(0.1),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+                // image of country
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 2, color: Colors.white),
+                  ),
+                  height: MediaQuery.of(context).size.height * 0.17,
+                  width: MediaQuery.of(context).size.width * 0.55,
+                  child: Image.network(
+                    widget.image.toString(),
+                    height: 110,
+                    width: 140,
+                    fit: BoxFit.fill,
+                    errorBuilder: (context, error, stackTrace) {
+                      return Icon(
+                        Icons.broken_image,
+                        size: 50,
+                        color: Colors.grey,
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                Text(
+                  widget.name!,
+                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+
+                // card for details
+                Card(
+                  margin: EdgeInsets.only(left: 10, right: 10),
+                  // ignore: deprecated_member_use
+                  color: Colors.grey[600]?.withOpacity(0.1),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.03,
                         ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.1,
-                              ),
-                              ReusableRow(
-                                title: 'Total Cases',
-                                value: widget.totalCases.toString(),
-                              ),
-                              ReusableRow(
-                                title: 'Total Recovered',
-                                value: widget.totalRecovered.toString(),
-                              ),
-                              ReusableRow(
-                                title: 'Total Deaths',
-                                value: widget.totalDeaths.toString(),
-                              ),
-                              ReusableRow(
-                                title: 'Active',
-                                value: widget.active.toString(),
-                              ),
-                              ReusableRow(
-                                title: 'Test',
-                                value: widget.test.toString(),
-                              ),
-                              ReusableRow(
-                                title: 'Today Recovered',
-                                value: widget.todayrecovered.toString(),
-                              ),
-                              ReusableRow(
-                                title: 'Critical',
-                                value: widget.critical.toString(),
-                              ),
-                              SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.03,
-                              ),
-                            ],
-                          ),
+                        ReusableRow(
+                          title: 'Total Cases',
+                          value: widget.totalCases.toString(),
                         ),
-                      ),
+                        ReusableRow(
+                          title: 'Total Recovered',
+                          value: widget.totalRecovered.toString(),
+                        ),
+                        ReusableRow(
+                          title: 'Total Deaths',
+                          value: widget.totalDeaths.toString(),
+                        ),
+                        ReusableRow(
+                          title: 'Active',
+                          value: widget.active.toString(),
+                        ),
+                        ReusableRow(
+                          title: 'Test',
+                          value: widget.test.toString(),
+                        ),
+                        ReusableRow(
+                          title: 'Today Recovered',
+                          value: widget.todayrecovered.toString(),
+                        ),
+                        ReusableRow(
+                          title: 'Critical',
+                          value: widget.critical.toString(),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.03,
+                        ),
+                      ],
                     ),
-                    // image of country
-                    Positioned(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(width: 2, color: Colors.white),
-                        ),
-                        height:
-                            100, 
-                        width: 150, 
-                        child: Image.network(
-                          widget.image.toString(),
-                          height:
-                              110, 
-                          width:
-                              150, 
-                          fit: BoxFit.fill,
-                          errorBuilder: (context, error, stackTrace) {
-                            return Icon(
-                              Icons.broken_image,
-                              size: 50,
-                              color: Colors.grey,
-                            );
-                          },
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ],
             ),
