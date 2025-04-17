@@ -22,7 +22,7 @@ This project is ideal for Flutter developers looking to explore API integration,
 
 | Splash Screen | World Stats | Country List | Country Details |
 |---------------|-------------|---------------|------------------|
-| https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/7d9cfd87f64f9161d8830080ea31fc5e637b0490/assets/splash%20screen.jpg | https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/7d9cfd87f64f9161d8830080ea31fc5e637b0490/assets/wolrd%20list.jpg |  | https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/42033468b9e17de1a57ca55059ae4dd55e660887/assets/Countries%20List.jpg |
+| ![image alt].https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/7d9cfd87f64f9161d8830080ea31fc5e637b0490/assets/splash%20screen.jpg | ![image alt].https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/7d9cfd87f64f9161d8830080ea31fc5e637b0490/assets/wolrd%20list.jpg | ![image alt].https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/42033468b9e17de1a57ca55059ae4dd55e660887/assets/Countries%20List.jpg | https://github.com/dharmtejaa/Flutter_Covid_Tracker/blob/ab5c5588a698dcf63ede9c71cd7aaf8a9d3886e5/assets/details%20list.jpg |
 
 > _Make sure to add actual screenshots to the `assets/screens/` folder for proper rendering._
 
